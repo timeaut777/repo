@@ -20,4 +20,4 @@ while c != 0:
     del kol[maxIndex]
     del vid[maxIndex]
     max = 0
-    c = c - 1
+    c -= 1
