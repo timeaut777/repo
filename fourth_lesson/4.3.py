@@ -2,7 +2,7 @@ do = input()
 c = 0
 a = 0
 
-while do != 'При':
+while do != 'Пришли полицейские':
     price1 = int(input())
     price2 = int(input())
     do = input()
@@ -20,5 +20,7 @@ while do != 'При':
             c = price2
 
     a += c
-
-print(a)
+if a >= 100:
+    print(a)
+else:
+    print(20000 + a)
