@@ -7,7 +7,7 @@ while do != 'При':
     price2 = int(input())
     do = input()
 
-    if c < 100:
+    if a < 100:
        if price1 > price2:
           c = price1
        else:
@@ -19,6 +19,6 @@ while do != 'При':
         else:
             c = price2
 
-    c += c
+    a += c
 
-print(c)
+print(a)
