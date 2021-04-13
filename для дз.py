@@ -1,19 +1,26 @@
-vid = int(input())
-max1 = 0
-max2 = 0
-max3 = 0
-for k in range(vid):
-    cv = input()
-    kol = int(input())
-    if kol > max1:
-        max2 = max1
-        max1 = kol
-    elif kol > max2:
-        max3 = max2
-        max2 = kol
-    elif kol > max3:
-        max3 = kol
+dlin = int(input())
+a = 0
+j = 0
+s = 0
+k = 0
+max = 0
 
-print(max1, max2, max3)
+for i in range(dlin//100):
+    v = int(input())
+    while v > a:
+        a = v
+        j += 1
+    if v <= a:
+        a = v
+        s = j
+
+    if s > j:
+        max = s
+    else:
+        max = j
+
+    j = 0
+
+print(max)
 
 
