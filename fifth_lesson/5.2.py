@@ -1,8 +1,8 @@
 ch = int(input())
-
-for i in range(k):
-    f = input().split()
-
+f = list()
+for i in range(ch):
+    c = input()
+    f.append(c)
 k = 0
 for i in range(len(f)-1):
     for j in range(len(f)-1):

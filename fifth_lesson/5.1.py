@@ -1,10 +1,12 @@
-k = int(input())
+ch = int(input())
+f = list()
+a = []
+for i in range(ch):
+    c = input()
+    f.append(c)
 
-for i in range(k):
-    f = [int(i) for i in input().split()]
-    for j in f:
-        a = []
-        if j not in a:
-            a.append(j)
+for j in f:
+    if j not in a:
+        a.append(j)
 
 print(a)
