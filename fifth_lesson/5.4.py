@@ -1,11 +1,11 @@
-n = input()
+n = int(input())
 f = input().split()
-m = -1
-index = -1
+d = [0]*(len(f))
+
 for i in range(len(f)):
-    
-    if i + n <= len(f):
-        i = i + n
+    if i-n >= 0:
+        d[i-n] = f[i]
     else:
-        i = (i + n) % len(f)
-print(f)
+        d[len(f)+i-n] = f[i]
+
+print(d)
