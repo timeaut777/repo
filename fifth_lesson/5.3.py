@@ -1,8 +1,8 @@
 ch = int(input())
-
+c = []
+s = []
 for i in range(ch):
-    f = input().split()
-    l = [int(i) for i in input().split()]
-    l.sort()
-    f.extend(l)
-print (f)
+    a = input().split()
+    b = input().split()
+    a.extend(b)
+    print(a)
