@@ -18,8 +18,11 @@ while n != 'Stop':
         n = n.replace('Удалить по фамилии ', '')
         if n in f:
             index = f.index(n)
-            d[index] = 0
-            print(f, d)
+            if d[index] == 0:
+                print('Фамилия уже была удалена')
+            else:
+                d[index] = 0
+                print(f, d)
         else:
             print('В списке нет такой фамилии')
 
@@ -29,5 +32,8 @@ while n != 'Stop':
         if n > len(f)-1:
             print('В списке нет такого индекса')
         else:
-            d[n] = 0
-            print(f, d)
+            if d[n] == 0:
+                print('Фамилия уже была удалена')
+            else:
+                d[n] = 0
+                print(f, d)
