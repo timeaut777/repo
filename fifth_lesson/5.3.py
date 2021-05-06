@@ -11,5 +11,4 @@ for k in range(len(c)-1):
         if c[l][1] > c[l+1][1]:
             c[l], c[l+1] = c[l+1], c[l]
 
-
 print(c)
