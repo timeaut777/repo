@@ -1,14 +1,20 @@
 ch = int(input())
-c = []
+a = []
+b = []
 for i in range(ch):
-    a = input().split()
-    b = [int(j) for j in input().split()]
-    a.extend(b)
-    c.append(a)
+    x = input()
+    y = int(input())
+    if x in a:
+        pass
+    else:
+        a.append(x)
+        a.append(y)
 
-for k in range(len(c)-1):
-    for l in range(len(c)-1):
-        if c[l][1] > c[l+1][1]:
-            c[l], c[l+1] = c[l+1], c[l]
+for i in range(len(a)//2):
+    b.append(a[i*2:i*2+2])
 
-print(c)
+for k in range(len(b)-1):
+    for l in range(len(b)-1):
+        if b[l][1] > b[l+1][1]:
+            b[l], b[l+1] = b[l+1], b[l]
+print(b)
