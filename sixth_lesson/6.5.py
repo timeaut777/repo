@@ -3,8 +3,7 @@ pole = [['*' for i in range(razm)] for k in range(razm)]
 zapolneno = 0
 rez = 0
 pobeda = 0
-s = int
-z = int
+flag = False
 
 while not (zapolneno > 9 or pobeda == 1):
     a = input().split()
@@ -13,19 +12,16 @@ while not (zapolneno > 9 or pobeda == 1):
     zapolneno += 1
     pole[x][y] = 'X'
 
-
-    for i in pole:
-        for k in i:
-            if k == '*':
-                s = pole.index(i)
-                z = i.index(k)
-                pole[s][z] = '0'
-                break.break.break
-
-    for i in pole:
-        for k in i:
-            print(k, end=' ')
-        print()
+    for i in range(len(pole)):
+        for k in range(len(pole)):
+            if pole[i][k] == '*':
+                pole[i][k] = '0'
+                flag = True
+                zapolneno += 1
+                break
+        if flag:
+            break
+    flag = False
 
     if pole[0][0] == 'X' and pole[0][1] == 'X' and pole[0][2] == 'X':
         rez = 'Победа крестиков'
@@ -81,12 +77,10 @@ while not (zapolneno > 9 or pobeda == 1):
         rez = 'Ничья'
         pobeda = 1
 
-print()
-
-for i in pole:
-    for k in i:
-        print(k, end=' ')
-    print()
+    for i in pole:
+        for k in i:
+            print(k, end=' ')
+        print()
 print()
 
 print(rez)
