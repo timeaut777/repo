@@ -5,7 +5,7 @@ rez = 0
 pobeda = 0
 flag = False
 
-while not (zapolneno > 9 or pobeda == 1):
+while not (zapolneno > razm**2 or pobeda == 1):
     a = input().split()
     x = int(a[0])-1
     y = int(a[1])-1
