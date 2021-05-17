@@ -77,20 +77,15 @@ while not (zapolneno > razm**2 or pobeda == 1):
         rez = 'Победа ноликов'
         pobeda = 1
 
-    elif zapolneno == 9:
+    elif zapolneno == 10:
         rez = 'Ничья'
         pobeda = 1
 
-    if d % 2 == 0:
+    if d % 2 == 0 or pobeda == 1:
         for i in pole:
             for k in i:
                 print(k, end=' ')
             print()
-
-for i in pole:
-    for k in i:
-        print(k, end=' ')
-    print()
 
 print()
 print(rez)
