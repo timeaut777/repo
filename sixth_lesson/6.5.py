@@ -1,27 +1,31 @@
 razm = 3
 pole = [['*' for i in range(razm)] for k in range(razm)]
-zapolneno = 0
+zapolneno = 1
 rez = 0
 pobeda = 0
 flag = False
+d = 0
 
 while not (zapolneno > razm**2 or pobeda == 1):
-    a = input().split()
-    x = int(a[0])-1
-    y = int(a[1])-1
-    zapolneno += 1
-    pole[x][y] = 'X'
 
-    for i in range(len(pole)):
-        for k in range(len(pole)):
-            if pole[i][k] == '*':
-                pole[i][k] = '0'
-                flag = True
-                zapolneno += 1
+    if zapolneno % 2 != 0:
+        a = input().split()
+        x = int(a[0])-1
+        y = int(a[1])-1
+        pole[x][y] = 'X'
+        zapolneno += 1
+    else:
+        for i in range(len(pole)):
+            for k in range(len(pole)):
+                if pole[i][k] == '*':
+                    pole[i][k] = '0'
+                    flag = True
+                    zapolneno += 1
+                    break
+            if flag:
                 break
-        if flag:
-            break
     flag = False
+    d += 1
 
     if pole[0][0] == 'X' and pole[0][1] == 'X' and pole[0][2] == 'X':
         rez = 'Победа крестиков'
@@ -77,10 +81,16 @@ while not (zapolneno > razm**2 or pobeda == 1):
         rez = 'Ничья'
         pobeda = 1
 
-    for i in pole:
-        for k in i:
-            print(k, end=' ')
-        print()
-print()
+    if d % 2 == 0:
+        for i in pole:
+            for k in i:
+                print(k, end=' ')
+            print()
 
+for i in pole:
+    for k in i:
+        print(k, end=' ')
+    print()
+
+print()
 print(rez)
